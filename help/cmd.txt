@@ -1,0 +1,6 @@
+To run Kernel
+	qemu-sytstem-x86_64 -nographic -kernal kernel.bin -s
+
+Compile assembly into binary
+	nasm -f bin kernel.asm -o kernel.bin
+
