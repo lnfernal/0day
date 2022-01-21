@@ -2,7 +2,10 @@
 ; Simple printing functions
 ;
 
+;
 ; Prints all characters in string up to NULL byte
+; The string to be printed must be loaded into the 
+; BX register.
 print:
 	pusha		; Push all registers onto the stack
 	mov ah, 0x0E	; Set TTY mode
@@ -19,7 +22,9 @@ print:
 	popa		; Pop all registers off the stack
 	ret
 
+;
 ; Print newline
+;
 print_newline:
 	pusha
 	mov ah, 0x0E	; Set TTY mode
@@ -30,7 +35,9 @@ print_newline:
 	popa
 	ret
 
+;
 ; Print hexadecimal values
+;
 print_hex:
 	pusha
 	mov cl, 0x00	; Set the counter to 0

@@ -29,6 +29,26 @@ int main() {
   printf(OUTPUT,"double",sizeof(double));
   printf(OUTPUT,"unsigned int",sizeof(unsigned int));
   printf(OUTPUT,"long long",sizeof(long long));
+
+  printf(OUTPUT,"int *", sizeof(int *));
+  printf(OUTPUT,"unsigned int *",sizeof(unsigned int *));
+  printf(OUTPUT,"short *",sizeof(short *));
+  printf(OUTPUT,"long *",sizeof(long *));
+  printf(OUTPUT,"char *",sizeof(char *));
+  printf(OUTPUT,"float *",sizeof(float *));
+  printf(OUTPUT,"double *", sizeof(double *));
+  printf(OUTPUT,"long long *",sizeof(long long *));
+  printf(OUTPUT,"uint8_t *",sizeof(uint8_t *));
+  printf(OUTPUT,"uint16_t *",sizeof(uint16_t *));
+  printf(OUTPUT,"uint32_t *",sizeof(uint32_t *));
+  printf(OUTPUT,"uint64_t *",sizeof(uint64_t *));
+  printf(OUTPUT,"uint_fast8_t *",sizeof(uint_fast8_t *));
+  printf(OUTPUT,"uint_fast16_t *",sizeof(uint_fast16_t *));
+  printf(OUTPUT,"uintmax_t *",sizeof(uintmax_t *));
+  printf(OUTPUT,"intmax_t *",sizeof(intmax_t *));
+  printf(OUTPUT,"__int128 *",sizeof(__int128 *));
+  printf(OUTPUT,"student *",sizeof(student *));
+
   printf(OUTPUT,"uint8_t",sizeof(uint8_t));
   printf(OUTPUT,"uint16_t",sizeof(uint16_t));
   printf(OUTPUT,"uint32_t",sizeof(uint32_t));
@@ -36,6 +56,7 @@ int main() {
   printf(OUTPUT,"uint_fast8_t",sizeof(uint_fast8_t));
   printf(OUTPUT,"uint_fast16_t",sizeof(uint_fast16_t));
   printf(OUTPUT,"uintmax_t",sizeof(uintmax_t));
+  printf(OUTPUT,"intmax_t",sizeof(intmax_t));
   printf(OUTPUT,"__int128",sizeof(__int128));
   printf(OUTPUT,"student",sizeof(student));
   // e.g. PRINT_SIZE("int", int);
@@ -55,6 +76,7 @@ int main() {
   // Array declaration. Use your macro to print the size of this.
   int x[5];
   printf(OUTPUT,"x",sizeof(x));
+  printf(OUTPUT,"&x",sizeof(&x));
 
   // You can just use your macro here instead: PRINT_SIZE("student", you);
   printf("size of %s : %zu bytes \n", "student", sizeof(you));
