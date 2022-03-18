@@ -1,0 +1,6 @@
+curl -i "http://127.0.0.1:5000/api/posts?tags=science"
+curl -i "http://127.0.0.1:5000/api/posts?tags=math,science"
+curl -i "http://127.0.0.1:5000/api/posts?tags=math,science,trucks"
+curl -i "http://127.0.0.1:5000/api/posts?tags="
+curl -i "http://127.0.0.1:5000/api/posts?tags=science,math,data,trucks,cake,computers,history"
+curl -i "http://127.0.0.1:5000/api/posts?tags=cake"

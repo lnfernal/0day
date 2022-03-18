@@ -73,6 +73,6 @@ Below is how the article performed this task. Put a quick lesson on anonymous fu
 # map(function, iterable(s))
 #
 # The filter() Function
-# As the name suggests, filter() forms anew list that contains only elements that satisfy a certain condition, i.e. the function we passwd returns True
+# As the name suggests, filter() forms a new list that contains only elements that satisfy a certain condition, i.e. the function we passed returns True
 # 	evens = list(filter(lambda x: x % 2 == 0, decimal_name))
 # 	print(evens)

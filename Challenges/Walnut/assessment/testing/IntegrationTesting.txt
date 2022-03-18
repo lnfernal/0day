@@ -1,0 +1,43 @@
+id: 7
+Description:
+Testing unlikely (and maybe unkown) XSS. 
+Assumptions:
+The endpoint is reachable. 
+Test Data:
+https://github.com/xmendez/wfuzz/blob/master/wordlist/Injections/XSS.txt
+Steps to be Executed:
+1. ./start_virtual_env.sh
+2. ./bootstrap.sh &> testing/scripts/7/7-1_log.txt
+3. wfuzz -f 7-1_results.html,html -z file,/home/maximillian/Documents/wordlists/XSS.txt http://127.0.0.1:5000/api/posts?tags=FUZZ
+4. ./bootstrap.sh &> testing/scripts/7/7-2_log.txt
+5. wfuzz -f 7-2_results.html,html -z file,/home/maximillian/Documents/wordlists/XSS.txt http://127.0.0.1:5000/api/posts?tags=science&sortBy=FUZZ
+6. ./bootstrap.sh &> testing/scripts/7/7-3_log.txt
+7. wfuzz -f 7-3_results.html,html -z file,/home/maximillian/Documents/wordlists/XSS.txt http://127.0.0.1:5000/api/posts?tags=science&sortBy=id&direction=FUZZ
+Expected Results:
+No XSS vulnerabilities should exist in any GET parameters. For the tags parameter, 200 response code should be respond as all input is valid. For sortBy, only 'id','reads','likes', and 'popularity' should return 200 response code, otherwise a 400 response code should be returned. For 'direction' only 'asc' and 'desc' should return 200 response code, otherwise 400 response code should be returned. 
+Actual Results:
+Correct response codes were returned
+Pass/Fail: Test Passed
+
+id: 8
+Description:
+Testing unlikely (and maybe unknown) SQLi.
+Assumption:
+The endpoint is reachable.
+Test Data:
+https://github.com/xmendez/wfuzz/blob/master/wordlist/Injections/SQL.txt
+Steps to be Executed
+1. ./start_virtual_env.sh
+2. ./bootstrap.sh &> testing/scripts/8/8-1_log.txt
+3. wfuzz -f 8-1_results.html,html -z file,/home/maximillian/Documents/wordlists/XSS.txt http://127.0.0.1:5000/api/posts?tags=FUZZ
+4. ./bootstrap.sh &> testing/scripts/8/8-2_log.txt
+5. wfuzz -f 8-2_results.html,html -z file,/home/maximillian/Documents/wordlists/XSS.txt http://127.0.0.1:5000/api/posts?tags=science&sortBy=FUZZ
+6. ./bootstrap.sh &> testing/scripts/8/8-3_log.txt
+7. wfuzz -f 8-3_results.html,html -z file,/home/maximillian/Documents/wordlists/XSS.txt http://127.0.0.1:5000/api/posts?tags=science&sortBy=id&direction=FUZZ
+Expected Results:
+No SQLi vulnerabilities should exit in any GET parameter. For the tags parameter, 200 response code should be the response as all input is valid. For sortBy, only 'id','reads','likes', and 'popularity' should return 200 response code, otherwise a 400 response code should be returned. For 'direction' only 'asc' and 'desc' should return 200 response code, otherwise 400 response code should be returned.
+Acutal Results:
+- 'curl -i "http://127.0.0.1:5000/api/posts?tags=%26"' which is the URL encoded version of '&' causes a KeyError to occur and return a 500 status code. This is caused by the URL being "api.hatchways.io/assessment/blog/posts?tag=& which causes Walnut's API to return {"error":"The tag parameter is required"}
+Pass/Fail: Test Failed
+Fixes:
+- I have written an extra conditional on line 62, although this may be a very sloppy way of remediating the whole issue as it does not account of other edge casees besides %26

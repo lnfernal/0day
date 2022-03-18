@@ -1,0 +1,32 @@
+ * Serving Flask app './backend_assessment/index.py' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://10.0.2.15:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction="><script>" HTTP/1.1[0m" 400 -
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction=<script>alert("WXSS")</script> HTTP/1.1[0m" 400 -
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction=<<script>alert("WXSS");//<</script> HTTP/1.1[0m" 400 -
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction=<script>alert(document.cookie)</script> HTTP/1.1[0m" 400 -
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction='><script>alert(document.cookie)</script> HTTP/1.1[0m" 400 -
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction='><script>alert(document.cookie);</script> HTTP/1.1[0m" 400 -
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction=\";alert('XSS');// HTTP/1.1[0m" 400 -
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction=%3cscript%3ealert("WXSS");%3c/script%3e HTTP/1.1[0m" 400 -
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction=%3cscript%3ealert(document.cookie);%3c%2fscript%3e HTTP/1.1[0m" 400 -
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction=%3Cscript%3Ealert(%22X%20SS%22);%3C/script%3E HTTP/1.1[0m" 400 -
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction=&ltscript&gtalert(document.cookie);</script> HTTP/1.1[0m" 400 -
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction=&ltscript&gtalert(document.cookie);&ltscript&gtalert HTTP/1.1[0m" 400 -
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction=<xss><script>alert('WXSS')</script></vulnerable> HTTP/1.1[0m" 400 -
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction=<IMG%20SRC='javascript:alert(document.cookie)'> HTTP/1.1[0m" 400 -
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction=<IMG%20SRC="javascript:alert('WXSS');"> HTTP/1.1[0m" 400 -
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction=<IMG%20SRC="javascript:alert('WXSS')" HTTP/1.1[0m" 400 -
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction=<IMG%20SRC=javascript:alert('WXSS')> HTTP/1.1[0m" 400 -
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction=<IMG%20SRC=JaVaScRiPt:alert('WXSS')> HTTP/1.1[0m" 400 -
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction=<IMG%20SRC=javascript:alert(&quot;WXSS&quot;)> HTTP/1.1[0m" 400 -
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction=<IMG%20SRC=`javascript:alert("'WXSS'")`> HTTP/1.1[0m" 400 -
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction=<IMG%20"""><SCRIPT>alert("WXSS")</SCRIPT>"> HTTP/1.1[0m" 400 -
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction=<IMG%20SRC=javascript:alert(String.fromCharCode(88,83,83))> HTTP/1.1[0m" 400 -
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction=<IMG%20SRC="jav HTTP/1.1[0m" 400 -
+127.0.0.1 - - [11/Mar/2022 15:28:12] "[31m[1mGET /api/posts?tags=science&sortBy=id&direction=<IMG%20SRC="jav HTTP/1.1[0m" 400 -

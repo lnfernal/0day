@@ -1,0 +1,166 @@
+
+id: 0
+Description: 
+Testing the 'tags' GET parameter. This parameter is responsible for finding entries in Walnut's API that contain at least
+one of the tags that was passed to the tags parameter. Several categories can be passed using a comma. ex. 'http://localhost/api/posts?tags=science,math'
+Assumptions: 
+The endpoint is reachable. The 'tags' parameter does not rely on other GET parameters
+Test Data: ['science','math','history','trucks','cake',',',',,','jack-in-the-box','-','zzz','a','qwerty','&','%','!','@','#','$','^','*','(',')','','math,history','math,birthdaycake']
+Steps to be Executed: 
+1. ./start_virtual_env.sh 
+2. ./bootstrap.sh &> testing/scripts/0/0_log.txt
+3. Running testing/scripts/0/0.sh will use Test Data and store results in 0_results.txt
+Expected Results: 
+If the category exists, "posts" json object will be returned to client (to large to include here). If not, an empty "posts" json object will be returned to the client ({"posts":[]})
+Actual Results:
+Response HTTP headers are located in testing/scripts/0/0_results.txt. Log file from server is located in testing/scripts/0/0_log.txt
+- ',' causes a server side error. This is due to Line 50: tags = tags.split(','). If only a comma is passed to the tags GET parameter, this results in a list looking like ['','']. When no tag value is passed to Walnut's API, an error is returned ("error":"The tag parameter is required"}. With no key "posts" in the returned json object, a key error occurs from Python.
+- ',,' causes same issue previously mentioned
+- '&' causes same issue previously mentioned
+Pass/Fail: Test failed to validate edge cases
+Fixes:
+- Check for empty/odd values before calling Walnut's API. Line 61 and 62 in index.py prevents empty values assigned to tag parameter 
+
+id: 1
+Description:
+Testing the 'sortBy' GET paremeter. This parameter is responsible for sorting the json object by the specified key. Valid keys are 'id','reads','likes', and 'popularity' with the default value of 'sortBy' being 'id'.
+Assumptions:
+The endpoint is reachable. The 'tags' parameter is included. The tags parameter will be testing in tangent with 'sortBy'.
+Test Data: I will be using this wordlist: https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/burp-parameter-names.txt to test the sortBy GET parameter as well as use the test data from test id 0. tags will only use the Test Data from test id 0.
+Steps to be Executed:
+1. ./start_virtual_env.sh
+2. ./bootstrap &> testing/scripts/1/1_log.txt
+3. Running testing/scripts/1/1.sh will use Test Data and store results in 1_results.txt
+Expected Results:
+The error message {"error":"sortBy parameter invalid"} and HTTP code 400 should be returned for every query except for 'id','reads','likes' and 'popularity' along with HTTP code 200
+Actual Results:
+Response HTTP headers are located in testing/scripts/1/1_results.txt. Log file from server is located in testing/scripts/1/1_log.txt
+The error message {"error":"sortBy parameter invalid"} with HTTP code 400 was returned for every query except for 'id','reads','likes', and 'popularity'.
+Pass/Fail: Test passed
+
+id: 2
+Description:
+Testing the direction GET parameter. This parameter is responsible for the order of the results. Either asc or desc with the default value being asc.
+Assumptions:
+The 'post' endpoint is reachable. The 'tags' parameter does not rely on other GET parameter (i.e. direction)
+Test Data: The same test data which was used in id 1.
+Steps to be Executed:
+1. ./start_virtual_env.sh
+2. ./bootstrap &> testing/scripts/2/2_log.txt
+3. Running testing/scripts/2/2.sh will use Test Data and store results in 2_results.txt
+Expected Results:
+The error message {"error":"direction parameter invalid"} should be returned for every value passed to 'direction' except 'asc' and 'desc'
+Actual Results:
+Response HTTP headers are located in testing/scripts/2/2_results.txt. Log file from server is located in testing/scripts/2/2_log.txt
+Pass/Fail: Test passed
+
+id: 3
+Description:
+Testing the 'tags' GET parameter to ensure it is working properly. This means the json object that is returned only contains tags that are specified.
+Assumption:
+The endpoint is reachable. 
+Test Data: ['science','math','data','trucks','cake','computers','history']
+Steps to be Executed:
+1. ./start_virtual_env.sh
+2. ./bootstrap.sh
+3. Submitting the following cURL requests which contain none, some, or all of the test data
+	a. curl -i "http://127.0.0.1:5000/api/posts?tags=science"
+	b. curl -i "http://127.0.0.1:5000/api/posts?tags=math,science"
+	c. curl -i "http://127.0.0.1:5000/api/posts?tags=math,science,trucks"
+	d. curl -i "http://127.0.0.1:5000/api/posts?tags="
+	e. curl -i "http://127.0.0.1:5000/api/posts?tags=science,math,data,trucks,cake,computers,history"
+	f. curl -i "http://127.0.0.1:5000/api/posts?tags=cake"
+4. Manual review of results
+Expected Results:
+Only categories that exist in Walnuts API should be returned. There should be no duplicateds. These results are unordered as neither sortBy or direction are included. If none of the specified tags exist within Walnuts API, the json object {"posts":[]} will be returned.
+Actual Results:
+Results are located in testing/scripts/3/3_results.txt
+Pass/Fail: Pass
+
+id: 4
+Description:
+Testing the sortBy GET parameter to ensure it works properly. This means that the json object is sorted by one of the following: id, reads, likes, popularity. The default is id.
+Assumptions:
+The endpoint is reachable. The required 'tags' parameter will be set using 'science' as it's parameter. Direction is also set by default as 'asc'
+Test Data: ['id','reads','likes','popularity','']
+Steps to be Executed:
+1. ./start_virtual_env.sh
+2. ./bootstrap.sh
+3. Manual GET requests using cURL:
+	a. curl -i "http://127.0.0.1:5000/api/posts?tags=science&sortBy=id"
+	b. curl -i "http://127.0.0.1:5000/api/posts?tags=science&sortBy=reads"
+	c. curl -i "http://127.0.0.1:5000/api/posts?tags=science&sortBy=likes"
+	d. curl -i "http://127.0.0.1:5000/api/posts?tags=science&sortBy=popularity"
+	e. curl -i "http://127.0.0.1:5000/api/posts?tags=science&sortBy="
+	f. curl -i "http://127.0.0.1:5000/api/posts?tags=science"
+	g. curl -i "http://127.0.0.1:5000/api/posts?tags=science&sortBy=cake"
+	h. curl -i "http://127.0.0.1:5000/api/posts?tags=science&sortBy=id,reads"
+	i. curl -i "http://127.0.0.1:5000/api/posts?tags=science&sortBy=id,trucks"
+4. Manual review of results
+Expected Results:
+When not specified, tags should be sorted by 'id' by default. Results will be sorted by default in ascending order. When a value that is not a valid sortBy value is passwd, the error message {"error":"sortBy parameter invalid"} should be returned
+Actual Results:
+Results are located in testing/scripts/4/4_results.txt
+Pass/Fail: Pass
+
+id: 5
+Description
+Testing the direction GET parameter to ensure it works properly. This means that the json object can be sorted in ascending or descending order.
+Assumptions
+The endpoint is reachable. The required 'tags' parameter will be set using 'science' as it's parameter. The 'sortBy' parameter will be 'id'.
+Test Data:
+['','asc','desc','asc,desc','trucks']
+Steps to be Executed;
+1. ./start_virtual_env.sh
+2. ./bootstrap.sh
+3. Manual GET requests using cURL
+	a. curl -i "http://127.0.0.1:5000/api/posts?tags=science&sortBy=id&direction="
+	b. curl -i "http://127.0.0.1:5000/api/posts?tags=science&sortBy=id&direction=asc"
+	c. curl -i "http://127.0.0.1:5000/api/posts?tags=science&sortBy=id"
+	d. curl -i "http://127.0.0.1:5000/api/posts?tags=science&sortBy=id&direction=desc"
+	e. curl -i "http://127.0.0.1:5000/api/posts?tags=science&sortBy=id&direction=asc,desc"
+	f. curl -i "http://127.0.0.1:5000/api/posts?tags=science&sortBy=id&direction=trucks"
+4. Manual review of results
+Expected Results:
+The only two values that should work should be 'asc' and 'desc'. Everything else should return the error message {"error":"direction parameter invalid"}
+Actual Results:
+Results are stored in testing/scripts/5/5_results.txt
+Pass/Fail: Pass
+
+id: 6
+Description:
+The only endpoints which should be available on the server are GET requests. Sending any other HTTP verb should results in an errory.
+Assumptions:
+The endpoint is reachable. The parameter for tags, is set to 'science'
+Steps to be Executed:
+1. ./start_virtual_env.sh
+2. ./bootstrap.sh
+3. Manual GET,POST,HEAD,PUT,DELETE
+	a. curl -i -X GET "http://127.0.0.1:5000/api/posts?tags=science"
+	b. curl -i -X POST "http://127.0.0.1:5000/api/posts?tags=science" --data "tags=science&sortBy=popularity&direction=asc"
+	c. curl -i -X HEAD "http://127.0.0.1:5000/api/posts?tags=science"
+	d. curl -i -X PUT "http://127.0.0.1:5000:/api/posts?tags=science" -d "Hello Friend..."
+	e. curl -i -X DELETE "http://127.0.0.1:5000/api/posts?tags=science"
+4. Manual review of results
+Expected Results:
+The server should responde with a HTTP 405 status code with all requests except GET
+Acutal Results:
+Only the GET request returned HTTP 200 status code
+Pass/Fail: Pass
+
+id: 9
+Description
+Determine whether caching works properly.
+Assumptions:
+Endpoint is reachable. Cache period ends after 50 seconds
+Test Data:
+Variations of cURL requests will be made in a specific order. 
+Steps to Be Executed:
+1. ./start_virtual_env.sh
+2. ./bootstrap &> testing/scripts/9/9_log.txt
+3. testing/scripts/9/9.sh
+Expected Results:
+Since the ttl of each request is 50 seconds, any subsequent request with the same parameters should be almost instant compared to the first time it was queried. Results are stored in testing/scripts/9/9_results.sh
+Actual Results:
+Identical subsequent requests are ~0.152 ms faster than the first request made.
+Pass/Fail: Pass

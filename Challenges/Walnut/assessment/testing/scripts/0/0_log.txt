@@ -1,0 +1,84 @@
+ * Serving Flask app './backend_assessment/index.py' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://10.0.2.15:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [10/Mar/2022 15:02:36] "GET /api/posts?tags=science HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2022 15:02:36] "GET /api/posts?tags=math HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2022 15:02:36] "GET /api/posts?tags=history HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2022 15:02:36] "GET /api/posts?tags=trucks HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2022 15:02:37] "GET /api/posts?tags=cake HTTP/1.1" 200 -
+[2022-03-10 15:02:37,210] ERROR in app: Exception on /api/posts [GET]
+Traceback (most recent call last):
+  File "/home/maximillian/.local/share/virtualenvs/assessment-SfVlbHV2/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/maximillian/.local/share/virtualenvs/assessment-SfVlbHV2/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/maximillian/.local/share/virtualenvs/assessment-SfVlbHV2/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/maximillian/.local/share/virtualenvs/assessment-SfVlbHV2/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/maximillian/Documents/repositories/0day/Challenges/Walnut/assessment/backend_assessment/index.py", line 65, in posts
+    noneDump = [results.append(post) for post in r.json()['posts'] if post not in results] # Should take care of duplicates
+KeyError: 'posts'
+127.0.0.1 - - [10/Mar/2022 15:02:37] "[35m[1mGET /api/posts?tags=, HTTP/1.1[0m" 500 -
+[2022-03-10 15:02:37,398] ERROR in app: Exception on /api/posts [GET]
+Traceback (most recent call last):
+  File "/home/maximillian/.local/share/virtualenvs/assessment-SfVlbHV2/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/maximillian/.local/share/virtualenvs/assessment-SfVlbHV2/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/maximillian/.local/share/virtualenvs/assessment-SfVlbHV2/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/maximillian/.local/share/virtualenvs/assessment-SfVlbHV2/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/maximillian/Documents/repositories/0day/Challenges/Walnut/assessment/backend_assessment/index.py", line 65, in posts
+    noneDump = [results.append(post) for post in r.json()['posts'] if post not in results] # Should take care of duplicates
+KeyError: 'posts'
+127.0.0.1 - - [10/Mar/2022 15:02:37] "[35m[1mGET /api/posts?tags=,, HTTP/1.1[0m" 500 -
+127.0.0.1 - - [10/Mar/2022 15:02:37] "GET /api/posts?tags=jack-in-the-box HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2022 15:02:37] "GET /api/posts?tags=- HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2022 15:02:38] "GET /api/posts?tags=zzz HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2022 15:02:38] "GET /api/posts?tags=a HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2022 15:02:38] "GET /api/posts?tags=qwerty HTTP/1.1" 200 -
+[2022-03-10 15:02:38,632] ERROR in app: Exception on /api/posts [GET]
+Traceback (most recent call last):
+  File "/home/maximillian/.local/share/virtualenvs/assessment-SfVlbHV2/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/maximillian/.local/share/virtualenvs/assessment-SfVlbHV2/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/maximillian/.local/share/virtualenvs/assessment-SfVlbHV2/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/maximillian/.local/share/virtualenvs/assessment-SfVlbHV2/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/maximillian/Documents/repositories/0day/Challenges/Walnut/assessment/backend_assessment/index.py", line 65, in posts
+    noneDump = [results.append(post) for post in r.json()['posts'] if post not in results] # Should take care of duplicates
+KeyError: 'posts'
+127.0.0.1 - - [10/Mar/2022 15:02:38] "[35m[1mGET /api/posts?tags=& HTTP/1.1[0m" 500 -
+127.0.0.1 - - [10/Mar/2022 15:02:38] "GET /api/posts?tags=% HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2022 15:02:39] "GET /api/posts?tags=! HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2022 15:02:39] "GET /api/posts?tags=@ HTTP/1.1" 200 -
+[2022-03-10 15:02:39,607] ERROR in app: Exception on /api/posts [GET]
+Traceback (most recent call last):
+  File "/home/maximillian/.local/share/virtualenvs/assessment-SfVlbHV2/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/maximillian/.local/share/virtualenvs/assessment-SfVlbHV2/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/maximillian/.local/share/virtualenvs/assessment-SfVlbHV2/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/maximillian/.local/share/virtualenvs/assessment-SfVlbHV2/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/maximillian/Documents/repositories/0day/Challenges/Walnut/assessment/backend_assessment/index.py", line 65, in posts
+    noneDump = [results.append(post) for post in r.json()['posts'] if post not in results] # Should take care of duplicates
+KeyError: 'posts'
+127.0.0.1 - - [10/Mar/2022 15:02:39] "[35m[1mGET /api/posts?tags= HTTP/1.1[0m" 500 -
+127.0.0.1 - - [10/Mar/2022 15:02:39] "GET /api/posts?tags=$ HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2022 15:02:40] "GET /api/posts?tags=^ HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2022 15:02:40] "GET /api/posts?tags=0_log.txt HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2022 15:02:40] "GET /api/posts?tags=0_results.txt HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2022 15:02:40] "GET /api/posts?tags=0.sh HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2022 15:02:40] "GET /api/posts?tags=( HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2022 15:02:41] "GET /api/posts?tags=) HTTP/1.1" 200 -

@@ -1,0 +1,44 @@
+<html><head></head><body bgcolor=#000000 text=#FFFFFF><h1>Fuzzing http://127.0.0.1:5000/api/posts?tags=science&sortBy=FUZZ</h1>
+<table border="1">
+<tr><td>#request</td><td>Code</td><td>#lines</td><td>#words</td><td>Url</td></tr>
+
+<tr><td>00001</td><td><font color=#FF0000>400</font></td><td>   1L</td><td>    3W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=science&sortBy="><script>">http://127.0.0.1:5000/api/posts?tags=science&sortBy="><script>"</a></td></tr>
+
+<tr><td>00003</td><td><font color=#FF0000>400</font></td><td>   1L</td><td>    3W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=science&sortBy=<<script>alert("WXSS");//<</script>>http://127.0.0.1:5000/api/posts?tags=science&sortBy=<<script>alert("WXSS");//<</script></a></td></tr>
+
+<tr><td>00002</td><td><font color=#FF0000>400</font></td><td>   1L</td><td>    3W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=science&sortBy=<script>alert("WXSS")</script>>http://127.0.0.1:5000/api/posts?tags=science&sortBy=<script>alert("WXSS")</script></a></td></tr>
+
+<tr><td>00004</td><td><font color=#FF0000>400</font></td><td>   1L</td><td>    3W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=science&sortBy=<script>alert(document.cookie)</script>>http://127.0.0.1:5000/api/posts?tags=science&sortBy=<script>alert(document.cookie)</script></a></td></tr>
+
+<tr><td>00005</td><td><font color=#FF0000>400</font></td><td>   1L</td><td>    3W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=science&sortBy='><script>alert(document.cookie)</script>>http://127.0.0.1:5000/api/posts?tags=science&sortBy='><script>alert(document.cookie)</script></a></td></tr>
+
+<tr><td>00006</td><td><font color=#FF0000>400</font></td><td>   1L</td><td>    3W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=science&sortBy='><script>alert(document.cookie);</script>>http://127.0.0.1:5000/api/posts?tags=science&sortBy='><script>alert(document.cookie);</script></a></td></tr>
+
+<tr><td>00007</td><td><font color=#FF0000>400</font></td><td>   1L</td><td>    3W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=science&sortBy=\";alert('XSS');//>http://127.0.0.1:5000/api/posts?tags=science&sortBy=\";alert('XSS');//</a></td></tr>
+
+<tr><td>00008</td><td><font color=#FF0000>400</font></td><td>   1L</td><td>    3W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=science&sortBy=%3cscript%3ealert("WXSS");%3c/script%3e>http://127.0.0.1:5000/api/posts?tags=science&sortBy=%3cscript%3ealert("WXSS");%3c/script%3e</a></td></tr>
+
+<tr><td>00009</td><td><font color=#FF0000>400</font></td><td>   1L</td><td>    3W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=science&sortBy=%3cscript%3ealert(document.cookie);%3c%2fscript%3e>http://127.0.0.1:5000/api/posts?tags=science&sortBy=%3cscript%3ealert(document.cookie);%3c%2fscript%3e</a></td></tr>
+
+<tr><td>00010</td><td><font color=#FF0000>400</font></td><td>   1L</td><td>    3W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=science&sortBy=%3Cscript%3Ealert(%22X%20SS%22);%3C/script%3E>http://127.0.0.1:5000/api/posts?tags=science&sortBy=%3Cscript%3Ealert(%22X%20SS%22);%3C/script%3E</a></td></tr>
+
+<tr><td>00012</td><td><font color=#FF0000>400</font></td><td>   1L</td><td>    3W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=science&sortBy=&ltscript&gtalert(document.cookie);&ltscript&gtalert>http://127.0.0.1:5000/api/posts?tags=science&sortBy=&ltscript&gtalert(document.cookie);&ltscript&gtalert</a></td></tr>
+
+<tr><td>00011</td><td><font color=#FF0000>400</font></td><td>   1L</td><td>    3W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=science&sortBy=&ltscript&gtalert(document.cookie);</script>>http://127.0.0.1:5000/api/posts?tags=science&sortBy=&ltscript&gtalert(document.cookie);</script></a></td></tr>
+
+<tr><td>00013</td><td><font color=#FF0000>400</font></td><td>   1L</td><td>    3W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=science&sortBy=<xss><script>alert('WXSS')</script></vulnerable>>http://127.0.0.1:5000/api/posts?tags=science&sortBy=<xss><script>alert('WXSS')</script></vulnerable></a></td></tr>
+
+<tr><td>00016</td><td><font color=#FF0000>400</font></td><td>   1L</td><td>    3W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=science&sortBy=<IMG%20SRC="javascript:alert('WXSS')">http://127.0.0.1:5000/api/posts?tags=science&sortBy=<IMG%20SRC="javascript:alert('WXSS')"</a></td></tr>
+
+<tr><td>00015</td><td><font color=#FF0000>400</font></td><td>   1L</td><td>    3W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=science&sortBy=<IMG%20SRC="javascript:alert('WXSS');">>http://127.0.0.1:5000/api/posts?tags=science&sortBy=<IMG%20SRC="javascript:alert('WXSS');"></a></td></tr>
+
+<tr><td>00017</td><td><font color=#FF0000>400</font></td><td>   1L</td><td>    3W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=science&sortBy=<IMG%20SRC=javascript:alert('WXSS')>>http://127.0.0.1:5000/api/posts?tags=science&sortBy=<IMG%20SRC=javascript:alert('WXSS')></a></td></tr>
+
+<tr><td>00018</td><td><font color=#FF0000>400</font></td><td>   1L</td><td>    3W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=science&sortBy=<IMG%20SRC=JaVaScRiPt:alert('WXSS')>>http://127.0.0.1:5000/api/posts?tags=science&sortBy=<IMG%20SRC=JaVaScRiPt:alert('WXSS')></a></td></tr>
+
+<tr><td>00014</td><td><font color=#FF0000>400</font></td><td>   1L</td><td>    3W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=science&sortBy=<IMG%20SRC='javascript:alert(document.cookie)'>>http://127.0.0.1:5000/api/posts?tags=science&sortBy=<IMG%20SRC='javascript:alert(document.cookie)'></a></td></tr>
+
+<tr><td>00019</td><td><font color=#FF0000>400</font></td><td>   1L</td><td>    3W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=science&sortBy=<IMG%20SRC=javascript:alert(&quot;WXSS&quot;)>>http://127.0.0.1:5000/api/posts?tags=science&sortBy=<IMG%20SRC=javascript:alert(&quot;WXSS&quot;)></a></td></tr>
+
+<tr><td>00020</td><td><font color=#FF0000>400</font></td><td>   1L</td><td>    3W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=science&sortBy=<IMG%20SRC=`javascript:alert("'WXSS'")`>>http://127.0.0.1:5000/api/posts?tags=science&sortBy=<IMG%20SRC=`javascript:alert("'WXSS'")`></a></td></tr>
+</table></body></html><h5>Wfuzz by EdgeSecurity<h5>

